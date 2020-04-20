@@ -630,3 +630,4 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+/src/.ipynb_checkpoints/

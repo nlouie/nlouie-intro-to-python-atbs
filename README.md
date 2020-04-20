@@ -20,4 +20,14 @@ CC BY-NC-SA 3.0
 6. Q&A
 7. Feedback
 
-{% jupyter_notebook "sample.ipynb" %}
+## Building this project
+
+### Requirements
+
+- Python 3.X
+
+### Converting the Notebook to Markdown
+
+```bash
+$ ipython nbconvert demo0.ipynb --to markdown
+``` 
