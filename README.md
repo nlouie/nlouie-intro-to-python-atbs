@@ -20,3 +20,4 @@ CC BY-NC-SA 3.0
 6. Q&A
 7. Feedback
 
+{% jupyter_notebook "sample.ipynb" %}
