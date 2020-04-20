@@ -3,6 +3,7 @@
 ## Resources
 - [Automate the boring stuff](https://automatetheboringstuff.com)
 - [Introduction to Python (Harvard)](http://tdc-www.harvard.edu/Python.pdf)
+- [Course Notes](http://pages.nlouie.com/nlouie-python-course-0/src/demo0)
 
 ## License
 CC BY-NC-SA 3.0
