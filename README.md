@@ -3,7 +3,7 @@
 ## Description
 
 IPython Notebook for Intro to Programming with Python.
-Originally created for [Boston Chinatown Neighborhood Community](https://bcnc.net)
+Originally created for [Boston Chinatown Neighborhood Center](https://bcnc.net)
 
 ## Resources
 - [Automate the boring stuff](https://automatetheboringstuff.com)
