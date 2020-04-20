@@ -270,7 +270,7 @@ I am a block comment
 
     ZeroDivisionError                         Traceback (most recent call last)
 
-    <ipython-input-9-340e47a3b5ce> in <module>
+    <ipython-input-53-340e47a3b5ce> in <module>
     ----> 1 8 / 0
     
 
@@ -283,23 +283,9 @@ I am a block comment
 ```
 
 
-
-
-    True
-
-
-
-
 ```python
 1 == 0
 ```
-
-
-
-
-    False
-
-
 
 
 ```python
@@ -309,8 +295,9 @@ I am a block comment
 ## Variables
 
 - Assign variables to values or expressions
-- variable name must start with a character from a-z or A-Z (may not be a number, special character)
-- do not use special keywords (True, False, with, type, print, List, Dict, import, is, not)
+- variable name must start with a character from a-z or A-Z, or _ (may not be a number, special character)
+- do not use special keywords (True, False, with, type, print, List, Dict, import, is, not, finally..)
+    - look up python "built-in" types for a full list
 
 
 ```python
@@ -320,11 +307,14 @@ x + y
 ```
 
 
-
-
-    1
-
-
+```python
+x = 0
+print(x)
+x+=1 # increment by 1
+print(x)
+y = 2
+x+=y # add itself to y, equivalent to x = x + y
+```
 
 
 ```python
@@ -336,10 +326,6 @@ print(full_name)
 full_name = "Ghostface Killa"
 print(full_name)
 ```
-
-    Biggie Smalls
-    Ghostface Killa
-
 
 ## Basic Data Types
 
@@ -357,13 +343,13 @@ print(full_name)
 print(type("hello world"))
 address:str = "102 49th street"
 print(type(address))
-
 ```
 
-    <class 'str'>
-    <class 'str'>
-    <class 'int'>
 
+```python
+print("bob's truck")
+print('bob\'s truck')
+```
 
 
 ```python
@@ -380,23 +366,15 @@ print(0.001 / 2)
 print(1 + 1.0)
 ```
 
-    <class 'float'>
-    9.5
-    0.0005
-    2.0
-
-
 
 ```python
-# booleans
+# booleans (0,1)
 isAsleep = True
+isAwake = False
 
 if isAsleep:
     print("zzzz")
 ```
-
-    zzzz
-
 
 
 ```python
@@ -404,13 +382,15 @@ if isAsleep:
 
 emotions = ["fear", "happiness", "anger", "envy", "sadness"]
 
+# indexes start at 0, 1, 2,...n-1
 print(emotions[1]) # indexing 1-th element
 print(len(emotions))
 ```
 
-    happiness
-    5
 
+```python
+["a", "b"] + ["c", "d"]
+```
 
 
 ```python
@@ -421,27 +401,11 @@ print(values)
 print(values["dime"])
 ```
 
-    {'penny': 0.01, 'nickle': '0.05', 'dime': '0.10', 'quarter': 0.25, 'dollar': '1.00'}
-    0.10
-
-
 
 ```python
 # Mixing data types can crash your program or cause unexpected behavior
 1 + "2"
 ```
-
-
-    ---------------------------------------------------------------------------
-
-    TypeError                                 Traceback (most recent call last)
-
-    <ipython-input-6-db092cb74d2d> in <module>
-    ----> 1 1 + "2"
-    
-
-    TypeError: unsupported operand type(s) for +: 'int' and 'str'
-
 
 ### Type Casting
 - Types can often be converted to other types in Python
@@ -454,37 +418,20 @@ string = str(number) + " 2"
 print(string)
 ```
 
-    1
-    1 2
-
-
 
 ```python
 int("5") + 5
 ```
 
 
-
-
-    10
-
-
-
-
 ```python
 str(["list"])
 ```
 
-
-
-
-    "['test']"
-
-
-
-## Conditionals
+## Conditionals & Control Flow
 
 - Running different blocks of code based on boolean values
+- We can determine which parts of code to run, and which to not run
 
 
 ```python
@@ -493,9 +440,6 @@ if (20 > 10):
 else:
     print("bar")
 ```
-
-    foo
-
 
 
 ```python
@@ -512,9 +456,6 @@ if True or False:
 else:
     print("barfoo")
 ```
-
-    foobar
-
 
 
 ```python
@@ -534,26 +475,18 @@ else:
     print("1")
 ```
 
-
-```python
-# This is the same as above
-x = True
-y = False
-if !x:
-    print(x)
-elif y == False:
-    print(y)
-else:
-    print("1")
-```
-
 ## Functions
 
 - functions take 0-n inputs and return an output
+- We call the inputs, parameters
+- functions must live above the code that calls it
 - If you don't return anything, Python will return `None`
 
 
 ```python
+def printSomething():
+    print("something")
+
 def add(a,b):
     return a + b
 
@@ -561,6 +494,7 @@ a = 5
 b = 10
 c = add(a,b)
 print(c)
+print(something)
 ```
 
 ### Built in functions
@@ -571,23 +505,9 @@ len("cowboy")
 ```
 
 
-
-
-    6
-
-
-
-
 ```python
 len(["1", "2", "3"])
 ```
-
-
-
-
-    3
-
-
 
 
 ```python
@@ -595,35 +515,19 @@ type((1,2))
 ```
 
 
-
-
-    tuple
-
-
-
-
 ```python
 max(5,6)
 ```
 
 
-
-
-    6
-
-
+```python
+max([1,2,3,4,99])
+```
 
 
 ```python
 abs(-10)
 ```
-
-
-
-
-    10
-
-
 
 ## User input
 
@@ -641,9 +545,175 @@ else:
     print("Please pay $", cost_avocado * input_number)
 ```
 
-    input the number of avocados you wish to buy20
-    Please pay $ 49.800000000000004
+## Imports
 
+- Many times, we need to use other functions, and code that is not provided built-in.
+- Python comes with many packages included, simply import them
+- Sometimes you may need to install packages with `pip`
+- `pip` is a package installer or python
+
+
+```python
+import math
+print(math.sqrt(49))
+print(math.floor(5.1))
+```
+
+    7.0
+    5
+
+
+
+```python
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Data for plotting
+t = np.arange(0.0, 2.0, 0.01)
+s = 1 + np.sin(2 * np.pi * t)
+
+fig, ax = plt.subplots()
+ax.plot(t, s)
+
+ax.set(xlabel='time (s)', ylabel='voltage (mV)',
+       title='Test Chart')
+ax.grid()
+
+plt.show()
+```
+
+
+![png](demo0_files/demo0_53_0.png)
+
+
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+x1 = np.linspace(0.0, 5.0)
+x2 = np.linspace(0.0, 2.0)
+
+y1 = np.cos(2 * np.pi * x1) * np.exp(-x1)
+y2 = np.cos(2 * np.pi * x2)
+
+plt.subplot(2, 1, 1)
+plt.plot(x1, y1, 'o-')
+plt.title('A tale of 2 subplots')
+plt.ylabel('Damped oscillation')
+
+plt.subplot(2, 1, 2)
+plt.plot(x2, y2, '.-')
+plt.xlabel('time (s)')
+plt.ylabel('Undamped')
+
+plt.show()
+```
+
+
+![png](demo0_files/demo0_54_0.png)
+
+
+## Loops
+
+- Use loops for repetitive tasks
+- Loops should be bounded within some range
+
+
+```python
+for i in range(0,4):
+    print(i, "hi!")
+```
+
+    0 hi!
+    1 hi!
+    2 hi!
+    3 hi!
+
+
+
+```python
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# returns the number of even numbers in the given list
+def numEvens(numbers:list):
+    count = 0
+    for number in numbers:
+        if number % 2 == 0:
+            print(number)
+            count+=1
+    return count
+
+print("evens:", numEvens(numbers))
+    
+```
+
+## Challenge
+
+### Challenge 1
+
+What does the following program print out?
+
+```python
+x = "Bath"
+y = "George"
+g = -10
+l = [0,2,4,10]
+
+if g > 20:
+    print("Joe")
+else:
+    print("Farm")
+if len(x) == 4:
+    print("Time")
+for i in l:
+    if l > 2:
+        print(i)
+p = l[0] + l[1]
+
+
+```
+
+
+```python
+## Questions?
+```
+
+    2
+    4
+    6
+    8
+    10
+    evens: 5
+
+
+## Challenge
+
+### Challenge 1
+
+What does the following program print out?
+
+```python
+x = "Bath"
+y = "George"
+g = -10
+l = [0,2,4,10]
+
+if g > 20:
+    print("Joe")
+else:
+    print("Farm")
+if len(x) == 4:
+    print("Time")
+for i in l:
+    if l > 2:
+        print(i)
+p = l[0] + l[1]
+
+
+```
 
 ## Questions?
 
@@ -655,18 +725,7 @@ else:
 
 Email me, or submit feedback at https://nlouie.com/courses
 
-## Feedback
 
-1. What was done well?
-2. What could have been done better?
-3. Would you attend another session? (Y/N)
+```python
 
-Email me, or submit feedback at https://nlouie.com/courses
-
-## Feedback
-
-1. What was done well?
-2. What could have been done better?
-3. Would you attend another session? (Y/N)
-
-Email me, or submit feedback at https://nlouie.com/courses
+```
