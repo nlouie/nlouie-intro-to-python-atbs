@@ -2,17 +2,21 @@
 
 ## Resources
 - [Automate the boring stuff](https://automatetheboringstuff.com)
+- [Introduction to Python (Harvard)](http://tdc-www.harvard.edu/Python.pdf)
+
+## License
+CC BY-NC-SA 3.0
 
 ## Agenda 
-* Introductions
-* What is programming? What is software engineering?
-* Why would I want to learn to program?
-* Diving into Python Programming
-    * Control flow
-    * Data types 
-    * Operations & Statements & Blocks
-    * Functions
-* Q&A
-* Feedback
-
+1. Introductions
+2. What is programming? Who is this course for? What is software engineering?
+3. Why would I want to learn to program? What can I automate? 
+4. Installing Python
+5. Diving into Python Programming
+    a. Control flow
+    b. Data types 
+    c. Operations & Statements & Blocks
+    d. Functions
+6. Q&A
+7. Feedback
 
