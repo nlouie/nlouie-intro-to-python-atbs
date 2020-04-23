@@ -1,5 +1,10 @@
 # Intro to Python: Module 0
 
+## Description
+
+IPython Notebook for Intro to Programming with Python.
+Originally created for [Boston Chinatown Neighborhood Center](https://bcnc.net)
+
 ## Resources
 - [Automate the boring stuff](https://automatetheboringstuff.com)
 - [Introduction to Python (Harvard)](https://tdc-www.harvard.edu/Python.pdf)
@@ -24,6 +29,11 @@ CC BY-NC-SA 3.0
 - jupyter
 
 or use anaconda environment
+
+### Setting up the project
+```
+$ pip install -r requirements.txt
+```
 
 ### Converting the Notebook to Markdown
 
