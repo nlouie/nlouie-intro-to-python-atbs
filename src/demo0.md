@@ -5,6 +5,9 @@
 print("Hello world!")
 ```
 
+    Hello world!
+
+
 ## Intro
 
 - Everyone can learn programming, it's never been easier.
@@ -190,6 +193,17 @@ I am a block comment
 '''
 ```
 
+    I am a statement!
+    Player number: 1
+
+
+
+
+
+    '\nI am a block comment \n'
+
+
+
 ### Operators and expressions
 
 In Python, 2 + 2 is called an expression, which is the most basic kind of programming instruction in the language. Expressions consist of **values** (such as 2) and **operators** (such as `+`), and they can always **evaluate** (that is, reduce) down to a single value. That means you can use expressions anywhere in Python code that you could also use a value.
@@ -219,9 +233,23 @@ In Python, 2 + 2 is called an expression, which is the most basic kind of progra
 ```
 
 
+
+
+    2
+
+
+
+
 ```python
 2 * 6
 ```
+
+
+
+
+    12
+
+
 
 
 ```python
@@ -229,9 +257,23 @@ In Python, 2 + 2 is called an expression, which is the most basic kind of progra
 ```
 
 
+
+
+    -5
+
+
+
+
 ```python
 (5 - 1) * ((7 + 1) / (3 - 1)) # PEMDAS
 ```
+
+
+
+
+    16.0
+
+
 
 
 ```python
@@ -239,9 +281,23 @@ In Python, 2 + 2 is called an expression, which is the most basic kind of progra
 ```
 
 
+
+
+    3.2857142857142856
+
+
+
+
 ```python
 23 // 7
 ```
+
+
+
+
+    3
+
+
 
 ### Modulus
 
@@ -253,9 +309,23 @@ In Python, 2 + 2 is called an expression, which is the most basic kind of progra
 ```
 
 
+
+
+    2
+
+
+
+
 ```python
 10 ** 2
 ```
+
+
+
+
+    100
+
+
 
 ### Error Messages
 - Programs will crash if they contain code the computer can’t understand, which will cause Python to show an error message. An error message won’t break your computer, though, so don’t be afraid to make mistakes. A crash just means the program stopped running unexpectedly.
@@ -274,6 +344,18 @@ In Python, 2 + 2 is called an expression, which is the most basic kind of progra
 8 / 0
 ```
 
+
+    ---------------------------------------------------------------------------
+
+    ZeroDivisionError                         Traceback (most recent call last)
+
+    <ipython-input-29-340e47a3b5ce> in <module>
+    ----> 1 8 / 0
+    
+
+    ZeroDivisionError: division by zero
+
+
 ## The Integer, Floating-Point, and String Data Types
 
 Remember that expressions are just values combined with operators, and they always evaluate down to a single value. A data type is a category for values, and every value belongs to exactly one data type.
@@ -291,6 +373,9 @@ Remember that expressions are just values combined with operators, and they alwa
 print('hello world')
 ```
 
+    hello world
+
+
 - strings can be surrounded by `'` or `"`
 - `''` or `""` is considered an "empty string"
 - forgetting to close a string leads to an error
@@ -306,6 +391,13 @@ However, when `+` is used on two string values, it joins the strings as the stri
 'alice' + 'bob'
 ```
 
+
+
+
+    'alicebob'
+
+
+
 - The expression evaluates down to a single, new string value that combines the text of the two strings. However, if you try to use the + operator on a string and an integer value, Python will not know how to handle this, and it will display an error message.
 - The error message can only concatenate str (not "int") to str means that Python thought you were trying to concatenate an integer to the string 'Alice'. Your code will have to explicitly convert the integer to a string because Python cannot do this automatically.
 
@@ -315,6 +407,19 @@ However, when `+` is used on two string values, it joins the strings as the stri
 'alice' + 2
 ```
 
+
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    <ipython-input-32-281b897eb5c9> in <module>
+          1 # Mixing data types can crash your program or cause unexpected behavior
+    ----> 2 'alice' + 2
+    
+
+    TypeError: can only concatenate str (not "int") to str
+
+
 - The * operator multiplies two integer or floating-point values. But when the * operator is used on one string value and one integer value, it becomes the string replication operator.
 
 
@@ -323,9 +428,28 @@ However, when `+` is used on two string values, it joins the strings as the stri
 ```
 
 
+
+
+    'AliceAliceAliceAliceAlice'
+
+
+
+
 ```python
 'Alice' * 5.0
 ```
+
+
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    <ipython-input-34-43325524c797> in <module>
+    ----> 1 'Alice' * 5.0
+    
+
+    TypeError: can't multiply sequence by non-int of type 'float'
+
 
 ## Storing Values in Variables
 
@@ -339,11 +463,25 @@ spam
 ```
 
 
+
+
+    42
+
+
+
+
 ```python
 x = 0
 y = 1
 x + y
 ```
+
+
+
+
+    1
+
+
 
 - A variable is initialized (or created) the first time a value is stored in it. After that, you can use it in expressions with other variables and values. When a variable is assigned a new value, the old value is forgotten, which is why printing `full_name` again printed `"Ghostface Killa"`. This is called overwriting the variable.
 
@@ -355,16 +493,25 @@ full_name = first_name + " " + last_name # string concatenation
 print(full_name)
 ```
 
+    Biggie Smalls
+
+
 
 ```python
 print(full_name)
 ```
+
+    Biggie Smalls
+
 
 
 ```python
 full_name = "Ghostface Killa"
 print(full_name)
 ```
+
+    Ghostface Killa
+
 
 ### Variable Names
 
@@ -444,6 +591,9 @@ $ python demo0.py
 print('Hello, world!')
 ```
 
+    Hello, world!
+
+
 - The line `print('Hello, world!')` means “Print out the text in the string 'Hello, world!'.” 
 - When Python executes this line, you say that Python is **calling** the `print()` function and the string value is being passed to the function. A value that is **passed** to a function call is an **argument**. 
 - Notice that the quotes are not printed to the screen. They just mark where the string begins and ends; they are not part of the string value.
@@ -460,6 +610,10 @@ my_name = input()
 print('It is good to meet you ' + my_name)
 ```
 
+    Al
+    It is good to meet you Al
+
+
 Remember that expressions can always evaluate to a single value. If `'Al'` is the value stored in `my_name`, then this expression evaluates to `'It is good to meet you, Al'`. This single string value is then passed to `print()`, which prints it on the screen.
 
 ### The `len()` Function
@@ -471,9 +625,23 @@ len("hello")
 ```
 
 
+
+
+    5
+
+
+
+
 ```python
 len("The quick brown fox jumped over the lazy dog")
 ```
+
+
+
+
+    44
+
+
 
 
 ```python
@@ -481,9 +649,23 @@ len('')
 ```
 
 
+
+
+    0
+
+
+
+
 ```python
 len("")
 ```
+
+
+
+
+    0
+
+
 
 - Just like those examples, `len(my_name)` evaluates to an integer. It is then passed to `print()` to be displayed on the screen. 
 - The `print()` function allows you to pass it either integer values or string values, but notice the error that shows up when you type the following into the interactive shell:
@@ -493,12 +675,36 @@ len("")
 print('I am ' + 29 + ' years old.')
 ```
 
+
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    <ipython-input-46-40e8f0b932d8> in <module>
+    ----> 1 print('I am ' + 29 + ' years old.')
+    
+
+    TypeError: can only concatenate str (not "int") to str
+
+
 The print() function isn’t causing that error, but rather it’s the expression you tried to pass to print(). You get the same error message if you type the expression into the interactive shell on its own.
 
 
 ```python
 'I am ' + 29 + ' years old.'
 ```
+
+
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    <ipython-input-47-b2e1590c4132> in <module>
+    ----> 1 'I am ' + 29 + ' years old.'
+    
+
+    TypeError: can only concatenate str (not "int") to str
+
 
 - Python gives an error because the `+` operator can only be used to add two integers together or concatenate two strings. 
 - You can’t add an integer to a string, because this is ungrammatical in Python. 
@@ -514,9 +720,19 @@ str(29)
 ```
 
 
+
+
+    '29'
+
+
+
+
 ```python
 print('I am ' + str(29) + ' years old.')
 ```
+
+    I am 29 years old.
+
 
 - Because `str(29)` evaluates to `'29'`, the expression `'I am ' + str(29) + ' years old.'` evaluates to `'I am ' + '29' + ' years old.'`, which in turn evaluates to `'I am 29 years old.'`. This is the value that is passed to the `print()` function.
 - The `str()`, `int()`, and `float()` functions will evaluate to the string, integer, and floating-point forms of the value you pass, respectively. 
@@ -528,9 +744,23 @@ str(0)
 ```
 
 
+
+
+    '0'
+
+
+
+
 ```python
 str(-3.14)
 ```
+
+
+
+
+    '-3.14'
+
+
 
 
 ```python
@@ -538,9 +768,23 @@ int('42')
 ```
 
 
+
+
+    42
+
+
+
+
 ```python
 int('-99')
 ```
+
+
+
+
+    -99
+
+
 
 
 ```python
@@ -548,25 +792,56 @@ int(1.25)
 ```
 
 
+
+
+    1
+
+
+
+
 ```python
 float(3.14)
 ```
+
+
+
+
+    3.14
+
+
 
 
 ```python
 float(10)
 ```
 
+
+
+
+    10.0
+
+
+
 - The previous examples call the `str()`, `int()`, and `float()` functions and pass them values of the other data types to obtain a string, integer, or floating-point form of those values.
 - The `str()` function is handy when you have an integer or float that you want to concatenate to a string. 
 - The `int()` function is also helpful if you have a number as a string value that you want to use in some mathematics.
-- For example, the `input()` function always returns a string, even if the user enters a number. Enter `spam = input()` into the interactive shell and enter 101 when it waits for your text.
+- For example, the `input()` function always returns a string, even if the user enters a number. Enter `spam = input()` into the interactive shell and enter `101` when it waits for your text.
 
 
 ```python
 spam = input()
 spam
 ```
+
+    101
+
+
+
+
+
+    '101'
+
+
 
 The value stored inside spam isn’t the integer 101 but the string '101'. If you want to do math using the value in spam, use the int() function to get the integer form of spam and then store this as the new value in spam.
 
@@ -576,12 +851,26 @@ spam = int(spam)
 spam
 ```
 
+
+
+
+    101
+
+
+
 Now you should be able to treat the spam variable as an integer instead of a string.
 
 
 ```python
 spam
 ```
+
+
+
+
+    101
+
+
 
 Note that if you pass a value to int() that it cannot evaluate as an integer, Python will display an error message.
 
@@ -591,9 +880,33 @@ int('99.99')
 ```
 
 
+    ---------------------------------------------------------------------------
+
+    ValueError                                Traceback (most recent call last)
+
+    <ipython-input-60-7e09e10be494> in <module>
+    ----> 1 int('99.99')
+    
+
+    ValueError: invalid literal for int() with base 10: '99.99'
+
+
+
 ```python
 int('twelve')
 ```
+
+
+    ---------------------------------------------------------------------------
+
+    ValueError                                Traceback (most recent call last)
+
+    <ipython-input-61-bcdccb17a8a6> in <module>
+    ----> 1 int('twelve')
+    
+
+    ValueError: invalid literal for int() with base 10: 'twelve'
+
 
 The `int()` function is also useful if you need to round a floating-point number down.
 
@@ -603,9 +916,23 @@ int(7.7)
 ```
 
 
+
+
+    7
+
+
+
+
 ```python
 int(7.7) + 1
 ```
+
+
+
+
+    8
+
+
 
 ### TEXT AND NUMBER EQUIVALENCE
 
@@ -618,6 +945,13 @@ int(7.7) + 1
 ```python
 42 == '42'
 ```
+
+
+
+
+    False
+
+
 
 
 ```python
@@ -728,3 +1062,8 @@ Extra credit: Search online for the Python documentation for the len() function.
 
 https://automatetheboringstuff.com/
 
+
+
+```python
+
+```
