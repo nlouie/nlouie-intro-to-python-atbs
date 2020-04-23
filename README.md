@@ -10,14 +10,9 @@ CC BY-NC-SA 3.0
 
 ## Agenda 
 1. Introductions
-2. What is programming? Who is this course for? What is software engineering?
-3. Why would I want to learn to program? What can I automate? 
+2. Introduction to programming & Python
 4. Installing Python
-5. Diving into Python Programming
-    a. Control flow
-    b. Data types 
-    c. Operations & Statements & Blocks
-    d. Functions
+5. Python Basics
 6. Q&A
 7. Feedback
 
@@ -26,9 +21,12 @@ CC BY-NC-SA 3.0
 ### Requirements
 
 - Python 3.X
+- jupyter
+
+or use anaconda environment
 
 ### Converting the Notebook to Markdown
 
 ```bash
-$ ipython nbconvert demo0.ipynb --to markdown
+$ jupyter nbconvert demo0.ipynb --to markdown
 ``` 
