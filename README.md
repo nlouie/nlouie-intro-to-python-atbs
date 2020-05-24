@@ -12,4 +12,3 @@ Originally created for [Boston Chinatown Neighborhood Center](https://bcnc.net)
 
 ## License
 CC BY-NC-SA 3.0
-## Agenda 
