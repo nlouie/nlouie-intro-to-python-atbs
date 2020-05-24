@@ -1,4 +1,4 @@
-# Intro to Python: Module 0
+# Intro to Python
 
 ## Description
 
@@ -12,3 +12,7 @@ Originally created for [Boston Chinatown Neighborhood Center](https://bcnc.net)
 
 ## License
 CC BY-NC-SA 3.0
+
+## Index
+
+### Module 1 Python Basics
