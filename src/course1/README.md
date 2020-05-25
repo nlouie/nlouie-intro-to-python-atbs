@@ -2,7 +2,7 @@
 
 [Source](https://automatetheboringstuff.com/2e/chapter2/)
 
-[Course Notes](/demo1)
+[Course Notes](https://pages.nlouie.com/nlouie-intro-to-python-atbs/src/course1/demo1)
 
 ## Agenda
 - boolean values and operators
