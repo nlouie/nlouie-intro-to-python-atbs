@@ -16,8 +16,8 @@ CC BY-NC-SA 3.0
 
 ## Index
 
-1. [Module 0 Python Basics](/src/demo0)
-2. [Module 1 Flow Control](/src/demo1)
+1. [Module 0 Python Basics](https://pages.nlouie.com/nlouie-intro-to-python-atbs/src/course0/demo0)
+2. [Module 1 Flow Control](https://pages.nlouie.com/nlouie-intro-to-python-atbs/src/course1/demo1)
 
 ## Building this project (for instructor/contributor use)
 
