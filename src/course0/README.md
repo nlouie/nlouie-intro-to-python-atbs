@@ -20,23 +20,3 @@ CC BY-NC-SA 3.0
 5. Python Basics
 6. Q&A
 7. Feedback
-
-## Building this project
-
-### Requirements
-
-- Python 3.X
-- jupyter
-
-or use anaconda environment
-
-### Setting up the project
-```
-$ pip install -r requirements.txt
-```
-
-### Converting the Notebook to Markdown
-
-```bash
-$ jupyter nbconvert demo0.ipynb --to markdown
-``` 
