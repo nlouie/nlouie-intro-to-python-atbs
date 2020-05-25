@@ -15,4 +15,5 @@ CC BY-NC-SA 3.0
 
 ## Index
 
-### Module 1 Python Basics
+1. Module 0 Python Basics
+2. Module 1 Flow Control
