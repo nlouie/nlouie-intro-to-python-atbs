@@ -16,8 +16,8 @@ CC BY-NC-SA 3.0
 
 ## Index
 
-1. Module 0 Python Basics
-2. Module 1 Flow Control
+1. [Module 0 Python Basics](/src/demo0)
+2. [Module 1 Flow Control](/src/demo1)
 
 ## Building this project (for instructor/contributor use)
 
@@ -29,7 +29,8 @@ CC BY-NC-SA 3.0
 or use anaconda environment
 
 ### Setting up the project
-```
+
+```bash
 $ pip install -r requirements.txt
 ```
 

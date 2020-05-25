@@ -3,7 +3,7 @@
 
 ## Intro
 
-https://automatetheboringstuff.com/2e/chapter2/
+(Source)[https://automatetheboringstuff.com/2e/chapter2/]
 
 So, you know the basics of individual instructions and that a program is just a series of instructions. But programming’s real strength isn’t just running one instruction after another like a weekend errand list. 
 

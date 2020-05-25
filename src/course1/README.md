@@ -2,6 +2,8 @@
 
 [Source](https://automatetheboringstuff.com/2e/chapter2/)
 
+[Course Notes](/demo1)
+
 ## Agenda
 - boolean values and operators
 - comparison operators
